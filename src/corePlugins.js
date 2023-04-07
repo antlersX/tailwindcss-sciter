@@ -708,9 +708,6 @@ export let corePlugins = {
       {
         'line-clamp': (value) => ({
           overflow: 'hidden',
-          display: '-webkit-box',
-          '-webkit-box-orient': 'vertical',
-          '-webkit-line-clamp': `${value}`,
         }),
       },
       { values: theme('lineClamp') }
@@ -720,8 +717,6 @@ export let corePlugins = {
       '.line-clamp-none': {
         overflow: 'visible',
         display: 'block',
-        '-webkit-box-orient': 'horizontal',
-        '-webkit-line-clamp': 'none',
       },
     })
   },
@@ -2187,14 +2182,8 @@ export let corePlugins = {
 
   fontSmoothing: ({ addUtilities }) => {
     addUtilities({
-      '.antialiased': {
-        '-webkit-font-smoothing': 'antialiased',
-        '-moz-osx-font-smoothing': 'grayscale',
-      },
-      '.subpixel-antialiased': {
-        '-webkit-font-smoothing': 'auto',
-        '-moz-osx-font-smoothing': 'auto',
-      },
+      '.antialiased': {},
+      '.subpixel-antialiased': {},
     })
   },
 

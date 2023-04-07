@@ -326,18 +326,7 @@ export function handleMergePseudo(selector, format) {
 let pseudoElementsBC = [':before', ':after', ':first-line', ':first-letter']
 
 // These pseudo-elements _can_ be combined with other pseudo selectors AND the order does matter.
-let pseudoElementExceptions = [
-  '::file-selector-button',
-
-  // Webkit scroll bar pseudo elements can be combined with user-action pseudo classes
-  '::-webkit-scrollbar',
-  '::-webkit-scrollbar-button',
-  '::-webkit-scrollbar-thumb',
-  '::-webkit-scrollbar-track',
-  '::-webkit-scrollbar-track-piece',
-  '::-webkit-scrollbar-corner',
-  '::-webkit-resizer',
-]
+let pseudoElementExceptions = ['::file-selector-button']
 
 /**
  * This will make sure to move pseudo's to the correct spot (the end for

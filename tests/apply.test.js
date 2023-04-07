@@ -1373,37 +1373,6 @@ crosscheck(({ stable, oxide }) => {
     })
   })
 
-  it('rules with vendor prefixes are still separate when optimizing defaults rules', () => {
-    let config = {
-      experimental: { optimizeUniversalDefaults: true },
-      content: [{ raw: html`<div class="border"></div>` }],
-      corePlugins: { preflight: false },
-    }
-
-    let input = css`
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;
-
-      @layer components {
-        input[type='range']::-moz-range-thumb {
-          @apply border;
-        }
-      }
-    `
-
-    return run(input, config).then((result) => {
-      return expect(result.css).toMatchFormattedCss(css`
-        input[type='range']::-moz-range-thumb {
-          border-width: 1px;
-        }
-        .border {
-          border-width: 1px;
-        }
-      `)
-    })
-  })
-
   it('should be possible to apply user css', () => {
     let config = {
       content: [{ raw: html`<div></div>` }],

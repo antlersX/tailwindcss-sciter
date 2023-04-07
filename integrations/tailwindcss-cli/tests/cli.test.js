@@ -105,7 +105,6 @@ describe('Build command', () => {
 
     expect(withAutoprefixer).toIncludeCss(css`
       .select-none {
-        -webkit-user-select: none;
         user-select: none;
       }
     `)

@@ -436,26 +436,15 @@ crosscheck(({ stable, oxide }) => {
           margin-top: 1.5rem;
         }
         .line-clamp-2 {
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          display: -webkit-box;
           overflow: hidden;
         }
         .line-clamp-\[33\] {
-          -webkit-line-clamp: 33;
-          -webkit-box-orient: vertical;
-          display: -webkit-box;
           overflow: hidden;
         }
         .line-clamp-\[var\(--line-clamp-variable\)\] {
-          -webkit-line-clamp: var(--line-clamp-variable);
-          -webkit-box-orient: vertical;
-          display: -webkit-box;
           overflow: hidden;
         }
         .line-clamp-none {
-          -webkit-line-clamp: none;
-          -webkit-box-orient: horizontal;
           display: block;
           overflow: visible;
         }
@@ -1006,26 +995,15 @@ crosscheck(({ stable, oxide }) => {
           margin-top: 1.5rem;
         }
         .line-clamp-2 {
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          display: -webkit-box;
           overflow: hidden;
         }
         .line-clamp-\[33\] {
-          -webkit-line-clamp: 33;
-          -webkit-box-orient: vertical;
-          display: -webkit-box;
           overflow: hidden;
         }
         .line-clamp-\[var\(--line-clamp-variable\)\] {
-          -webkit-line-clamp: var(--line-clamp-variable);
-          -webkit-box-orient: vertical;
-          display: -webkit-box;
           overflow: hidden;
         }
         .line-clamp-none {
-          -webkit-line-clamp: none;
-          -webkit-box-orient: horizontal;
           display: block;
           overflow: visible;
         }

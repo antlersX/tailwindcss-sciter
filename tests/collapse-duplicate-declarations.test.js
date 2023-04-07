@@ -159,7 +159,6 @@ crosscheck(() => {
         .h-available {
           height: 100%;
           height: 100vh;
-          height: -webkit-fill-available;
         }
       }
     `
@@ -169,7 +168,6 @@ crosscheck(() => {
         .h-available {
           height: 100%;
           height: 100vh;
-          height: -webkit-fill-available;
         }
       `)
     })

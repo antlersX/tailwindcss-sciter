@@ -42,32 +42,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: Cache node_modules (tailwindcss)
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ matrix.node-version }}-${{ env.CACHE_PREFIX }}-node_modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Cache node_modules (integrations)
-        uses: actions/cache@v3
-        with:
-          path: ./integrations/node_modules
-          key: ${{ runner.os }}-${{ matrix.node-version }}-${{ env.CACHE_PREFIX }}-node_modules-integrations-${{ hashFiles('./integrations/package-lock.json') }}
-
-      - name: Cache node_modules (integration)
-        uses: actions/cache@v3
-        with:
-          path: ./integrations/${{ matrix.integration }}/node_modules
-          key: ${{ runner.os }}-${{ matrix.node-version }}-${{ env.CACHE_PREFIX }}-node_modules-integrations-${{ matrix.integration }}-${{ hashFiles('./integrations/${{ matrix.integration }}/package-lock.json') }}
-
       - name: 安装依赖
         run: npm install
-
-      - name: Install dependencies (shared integrations)
-        run: npm install --prefix ./integrations
-
-      - name: Install dependencies (integration)
-        run: npm install --prefix ./integrations/${{ matrix.integration }}
 
       - name: 构建
         run: npm run build

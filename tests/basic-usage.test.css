@@ -987,8 +987,6 @@
   text-underline-offset: 2px;
 }
 
-.antialiased {}
-
 .placeholder-green-300::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(134 239 172 / var(--tw-placeholder-opacity));

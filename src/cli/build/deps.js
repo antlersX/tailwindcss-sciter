@@ -46,11 +46,11 @@ export function loadCssNano() {
   return lazyCssnano()(options)
 }
 
-export function loadAutoprefixer() {
-  // Try to load a local `autoprefixer` version first
-  try {
-    return require('autoprefixer')
-  } catch {}
+// export function loadAutoprefixer() {
+//   // Try to load a local `autoprefixer` version first
+//   try {
+//     return require('autoprefixer')
+//   } catch {}
 
-  return lazyAutoprefixer()
-}
+//   return lazyAutoprefixer()
+// }

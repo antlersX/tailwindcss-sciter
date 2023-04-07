@@ -42,7 +42,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: Use the `stable` engine
+      - name: 切换到 stable 引擎
         run: |
           node ./scripts/swap-engines.js
 
@@ -64,7 +64,7 @@ jobs:
           path: ./integrations/${{ matrix.integration }}/node_modules
           key: ${{ runner.os }}-${{ matrix.node-version }}-${{ env.CACHE_PREFIX }}-node_modules-integrations-${{ matrix.integration }}-${{ hashFiles('./integrations/${{ matrix.integration }}/package-lock.json') }}
 
-      - name: Install dependencies
+      - name: 安装依赖
         run: npm install
 
       - name: Install dependencies (shared integrations)
@@ -73,7 +73,7 @@ jobs:
       - name: Install dependencies (integration)
         run: npm install --prefix ./integrations/${{ matrix.integration }}
 
-      - name: Build Tailwind CSS
+      - name: 构建
         run: npm run build
 
       - name: Test ${{ matrix.integration }}

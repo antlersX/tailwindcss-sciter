@@ -24,7 +24,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12, 18]
+        node-version: [18]
 
     steps:
       - uses: actions/checkout@v3
@@ -39,13 +39,13 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-${{ matrix.node-version }}-${{ env.CACHE_PREFIX }}-node_modules-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Install dependencies
+      - name: 安装依赖
         run: npm install
 
-      - name: Build Tailwind CSS
+      - name: 构建
         run: npm run build
 
-      - name: Test
+      - name: 测试
         run: npm run test
 
       - name: Lint

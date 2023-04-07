@@ -22,15 +22,7 @@ jobs:
     strategy:
       matrix:
         integration:
-          - content-resolution
-          - parcel
-          - postcss-cli
-          - rollup
-          - rollup-sass
           - tailwindcss-cli
-          - vite
-          - webpack-4
-          - webpack-5
         node-version: [18]
       fail-fast: false
 

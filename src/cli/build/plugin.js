@@ -330,14 +330,11 @@ export async function createProcessor(args, cliConfigPath) {
   }
 
   async function build() {
-    console.log('构建===========')
     let start = process.hrtime.bigint()
 
     return readInput()
       .then((css) => processor.process(css, { ...postcssOptions, from: input, to: output }))
       .then((result) => {
-        console.log('结果')
-        console.log(result)
         if (!state.watcher) {
           return result
         }

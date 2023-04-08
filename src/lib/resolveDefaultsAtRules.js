@@ -153,9 +153,9 @@ export default function resolveDefaultsAtRules({ tailwindConfig }) {
         universal.remove()
       }
 
-      let backdropRule = universalRule.clone({
-        selectors: ['::backdrop'],
-      })
+      // let backdropRule = universalRule.clone({
+      //   selectors: ['::backdrop'],
+      // })
 
       universalRule.after(backdropRule)
     }

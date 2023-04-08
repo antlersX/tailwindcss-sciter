@@ -157,7 +157,7 @@ export default function resolveDefaultsAtRules({ tailwindConfig }) {
       //   selectors: ['::backdrop'],
       // })
 
-      universalRule.after(backdropRule)
+      // universalRule.after(backdropRule)
     }
   }
 }
